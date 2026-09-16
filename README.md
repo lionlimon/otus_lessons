@@ -10,9 +10,16 @@
 - [Trade-offs](docs/tradeoffs.md) — архитектурные компромиссы между атрибутами качества
 - [C4 — Context](docs/c4-context.md) — контекстная диаграмма (C1)
 - [C4 — Container](docs/c4-container.md) — диаграмма контейнеров (C2)
+- [Фронтенд-архитектура](docs/frontend-architecture.md) — декомпозиция по FSD, рендеринг и сборка, масштабирование, CI/CD
 - [ADR](docs/adr/) — записи об архитектурных решениях
   - [0001 — Кэширование по типу данных](docs/adr/0001-caching-per-data-type.md)
   - [0002 — SLA-планировщик внутри тикетницы](docs/adr/0002-sla-scheduler-in-ticket-service.md)
+  - [0003 — Фичи внутри виджетов](docs/adr/0003-features-inside-widgets.md)
+  - [0004 — Права как инфраструктурный сервис](docs/adr/0004-permissions-in-shared.md)
+  - [0005 — CSR вместо SSR](docs/adr/0005-csr-over-ssr.md)
+  - [0006 — Поллинг вместо push-канала](docs/adr/0006-polling-over-push.md)
+  - [0007 — Единый репозиторий без микрофронтендов](docs/adr/0007-single-repo-no-microfrontends.md)
+  - [0008 — Атомарный деплой и откат](docs/adr/0008-atomic-deploy-and-rollback.md)
 
 ---
 
