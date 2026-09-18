@@ -11,6 +11,9 @@
 - [C4 — Context](docs/c4-context.md) — контекстная диаграмма (C1)
 - [C4 — Container](docs/c4-container.md) — диаграмма контейнеров (C2)
 - [Фронтенд-архитектура](docs/frontend-architecture.md) — декомпозиция по FSD, рендеринг и сборка, масштабирование, CI/CD
+- [Клиенты и их сценарии](docs/clients-and-scenarios.md) — кто обращается к системе и с какими запросами
+- [Решение по слою входа](docs/entry-layer.md) — ingress и BFF, граница ответственности
+- [Слой входа: схема](docs/views/entry-layer.md) — путь запроса снаружи внутрь и сборка карточки
 - [ADR](docs/adr/) — записи об архитектурных решениях
   - [0001 — Кэширование по типу данных](docs/adr/0001-caching-per-data-type.md)
   - [0002 — SLA-планировщик внутри тикетницы](docs/adr/0002-sla-scheduler-in-ticket-service.md)
@@ -20,6 +23,7 @@
   - [0006 — Поллинг вместо push-канала](docs/adr/0006-polling-over-push.md)
   - [0007 — Единый репозиторий без микрофронтендов](docs/adr/0007-single-repo-no-microfrontends.md)
   - [0008 — Атомарный деплой и откат](docs/adr/0008-atomic-deploy-and-rollback.md)
+  - [0009 — Слой входа: ingress и один BFF](docs/adr/0009-entry-layer-ingress-and-bff.md)
 
 ---
 
