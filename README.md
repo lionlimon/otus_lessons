@@ -17,6 +17,9 @@
 - [Клиенты и их сценарии](docs/clients-and-scenarios.md) — кто обращается к системе и с какими запросами
 - [Решение по слою входа](docs/entry-layer.md) — ingress и BFF, граница ответственности
 - [Слой входа: схема](docs/views/entry-layer.md) — путь запроса снаружи внутрь и сборка карточки
+- [Точки кеширования](docs/cache-points.md) — данные системы, разметка по точкам и разбор спорных случаев
+- [Инвалидация кеша](docs/cache-invalidation.md) — чем обеспечивается свежесть, поведение при релизе и откате, вопросы к смежникам
+- [Точки кеширования: схема](docs/views/cache-map.md) — путь запроса и жизнь данных на клиенте
 - [ADR](docs/adr/) — записи об архитектурных решениях
   - [0001 — Кэширование по типу данных](docs/adr/0001-caching-per-data-type.md)
   - [0002 — SLA-планировщик внутри тикетницы](docs/adr/0002-sla-scheduler-in-ticket-service.md)
@@ -28,6 +31,7 @@
   - [0008 — Атомарный деплой и откат](docs/adr/0008-atomic-deploy-and-rollback.md)
   - [0009 — Слой входа: ingress и один BFF](docs/adr/0009-entry-layer-ingress-and-bff.md)
   - [0010 — Одна ручка на карточку тикета](docs/adr/0010-single-endpoint-per-card.md)
+  - [0011 — Вложения не кешируются на клиенте](docs/adr/0011-attachments-not-cached-on-client.md)
 
 ---
 
