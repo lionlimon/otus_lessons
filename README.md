@@ -20,6 +20,8 @@
 - [Точки кеширования](docs/cache-points.md) — данные системы, разметка по точкам и разбор спорных случаев
 - [Инвалидация кеша](docs/cache-invalidation.md) — чем обеспечивается свежесть, поведение при релизе и откате, вопросы к смежникам
 - [Точки кеширования: схема](docs/views/cache-map.md) — путь запроса и жизнь данных на клиенте
+- [Модели взаимодействия](docs/interaction-model.md) — стыки сервисов, sync/async, координация процессов, идемпотентность и контракты
+- [Взаимодействия: схема](docs/views/interaction-map.md) — карта стыков и путь обращения во времени
 - [ADR](docs/adr/) — записи об архитектурных решениях
   - [0001 — Кэширование по типу данных](docs/adr/0001-caching-per-data-type.md)
   - [0002 — SLA-планировщик внутри тикетницы](docs/adr/0002-sla-scheduler-in-ticket-service.md)
@@ -32,6 +34,8 @@
   - [0009 — Слой входа: ingress и один BFF](docs/adr/0009-entry-layer-ingress-and-bff.md)
   - [0010 — Одна ручка на карточку тикета](docs/adr/0010-single-endpoint-per-card.md)
   - [0011 — Вложения не кешируются на клиенте](docs/adr/0011-attachments-not-cached-on-client.md)
+  - [0012 — Обращение создаётся встречным вызовом](docs/adr/0012-inbound-call-for-new-conversations.md)
+  - [0013 — Брокер сообщений не заводится](docs/adr/0013-no-message-broker.md)
 
 ---
 
