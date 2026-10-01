@@ -36,11 +36,11 @@ flowchart TB
 
     bff -->|"REST: CRUD тикетов"| core
     bff -->|"read/write"| cache
-    bff <-->|"проксирование:<br/>GET сообщения / POST ответ"| chat
+    bff <-->|"проксирование:<br/>GET сообщения / POST ответ,<br/>входящее: новое обращение"| chat
     bff -->|"HTTPS/JSON<br/>live-чтение (мимо кэша)<br/>для критичных полей"| orders
     bff -->|"HTTPS/JSON"| flights
     bff -->|"HTTPS/JSON"| pax
-    bff -->|"OIDC: проверка сессии"| idp
+    bff -->|"OIDC: проверка сессии<br/>и токена сервиса"| idp
     bff -->|"события: просмотр ПДн"| audit
     bff -->|"чтение журнала для /journal"| audit
 
