@@ -18,22 +18,22 @@
 ```mermaid
 flowchart TB
     subgraph SYS["Наша система"]
-        TICKETS["Тикетница\ncore\n\nагрегат: Обращение"]
-        AGG["Агрегация контекста\ncore\n\n(query-side, без своих событий)"]
-        ADMIN["Администрирование\nsupporting\n\nагрегаты: Пользователь,\nПолитики маршрутизации/SLA"]
-        AUDIT["Аудит\nsupporting\n\nагрегат: Журнал аудита\n(append-only)"]
+        TICKETS["Тикетница<br/>core<br/><br/>агрегат: Обращение"]
+        AGG["Агрегация контекста<br/>core<br/><br/>(query-side, без своих событий)"]
+        ADMIN["Администрирование<br/>supporting<br/><br/>агрегаты: Пользователь,<br/>Политики маршрутизации/SLA"]
+        AUDIT["Аудит<br/>supporting<br/><br/>агрегат: Журнал аудита<br/>(append-only)"]
     end
 
-    FOS(["ФОС / чат\nвнешний, др. команда"])
-    SRC(["Заказы · Рейсы · Пассажиры\nвнешние, др. команды"])
-    IDP(["SSO/OIDC\nвнешний, generic"])
+    FOS(["ФОС / чат<br/>внешний, др. команда"])
+    SRC(["Заказы · Рейсы · Пассажиры<br/>внешние, др. команды"])
+    IDP(["SSO/OIDC<br/>внешний, generic"])
 
     TICKETS <-->|"ACL (IChatGateway)"| FOS
-    TICKETS -->|"OHS: событие\nfire-and-forget"| AUDIT
-    ADMIN -->|"OHS: событие\nfire-and-forget"| AUDIT
-    TICKETS -->|"Customer/Supplier\nAPI: роли и права"| ADMIN
-    TICKETS -->|"Customer/Supplier\nAPI: контекст тикета"| AGG
-    AGG -->|"ACL\n(разные протоколы →\nединая модель)"| SRC
+    TICKETS -->|"OHS: событие<br/>fire-and-forget"| AUDIT
+    ADMIN -->|"OHS: событие<br/>fire-and-forget"| AUDIT
+    TICKETS -->|"Customer/Supplier<br/>API: роли и права"| ADMIN
+    TICKETS -->|"Customer/Supplier<br/>API: контекст тикета"| AGG
+    AGG -->|"ACL<br/>(разные протоколы →<br/>единая модель)"| SRC
     TICKETS -.->|"Conformist (OIDC)"| IDP
 
     classDef core fill:#438dd5,stroke:#2e6295,color:#fff
