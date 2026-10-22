@@ -17,7 +17,8 @@ graph TB
 
     A --> S
     S --> H
-    H --> I["Ingress<br/>раздача статики, роутинг"]
+    H --> I["Ingress<br/>роутинг"]
+    I --> W["Web UI<br/>nginx со сборкой"]
     I --> F["BFF"]
     F --> C[("Кэш Redis<br/>некритичный контекст")]
     F --> SRC["Тикетница, заказы, рейсы,<br/>пассажиры, ФОС"]
@@ -40,7 +41,7 @@ graph TB
     class A client
     class S,H store
     class I,F entry
-    class C,SRC svc
+    class C,SRC,W svc
     class S1,H1,I1,C1,F1 note
     class E absent
 ```

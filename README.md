@@ -23,6 +23,7 @@
 - [Модели взаимодействия](docs/interaction-model.md) — стыки сервисов, sync/async, координация процессов, идемпотентность и контракты
 - [Взаимодействия: схема](docs/views/interaction-map.md) — карта стыков и путь обращения во времени
 - [Аутентификация и авторизация](docs/auth-model.md): роли, вход и сессия, модель доступа, где проверяется принадлежность тикета
+- [Система в кластере](docs/kubernetes-objects.md): Deployment и Service, вход через Ingress, ConfigMap и Secret, что мешает быть stateless, пробы
 - [ADR](docs/adr/) — записи об архитектурных решениях
   - [0001 — Кэширование по типу данных](docs/adr/0001-caching-per-data-type.md)
   - [0002 — SLA-планировщик внутри тикетницы](docs/adr/0002-sla-scheduler-in-ticket-service.md)
@@ -40,6 +41,7 @@
   - [0014. Своя сессия BFF, права сверяются на каждом запросе](docs/adr/0014-own-session-and-per-request-rights.md)
   - [0015. Тикетница пускает только BFF](docs/adr/0015-ticket-service-trusts-bff-by-network.md)
   - [0016. Тикеты назначает маршрутизатор](docs/adr/0016-push-routing.md)
+  - [0017. Статика SPA отдаётся из образа nginx](docs/adr/0017-spa-static-in-nginx-image.md)
 
 ---
 
