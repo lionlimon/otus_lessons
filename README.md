@@ -24,6 +24,7 @@
 - [Взаимодействия: схема](docs/views/interaction-map.md) — карта стыков и путь обращения во времени
 - [Аутентификация и авторизация](docs/auth-model.md): роли, вход и сессия, модель доступа, где проверяется принадлежность тикета
 - [Система в кластере](docs/kubernetes-objects.md): Deployment и Service, вход через Ingress, ConfigMap и Secret, что мешает быть stateless, пробы
+- [Разбор архитектуры](docs/architecture-review.md): драйверы с мерой, три сценария качества, проверка обеих C4, главный размен и условия его пересмотра
 - [ADR](docs/adr/) — записи об архитектурных решениях
   - [0001 — Кэширование по типу данных](docs/adr/0001-caching-per-data-type.md)
   - [0002 — SLA-планировщик внутри тикетницы](docs/adr/0002-sla-scheduler-in-ticket-service.md)

@@ -45,23 +45,25 @@ flowchart TB
     bff -->|"OIDC: вход пользователя,<br/>ключи для токена сервиса"| idp
     idp -->|"SCIM: заведение<br/>и отключение пользователей"| bff
     bff -->|"на каждом запросе: активность,<br/>роль, права; управление<br/>пользователями; SCIM"| admin
-    bff -->|"события: просмотр ПДн,<br/>действия над заказом"| audit
+    bff -->|"события без ожидания: просмотр ПДн,<br/>действия над заказом"| audit
     bff -->|"чтение журнала для /journal"| audit
 
     core -->|"тикеты, очередь"| ticketdb
-    core -->|"события: действия над тикетом"| audit
+    core -->|"события без ожидания:<br/>действия над тикетом"| audit
     core -->|"линия агента<br/>для маршрутизации"| admin
     core -->|"SLA-алерты"| notify
     core -->|"актуальное время вылета<br/>для пересчёта дедлайнов"| flights
     audit -->|"append-only запись"| auditdb
     admin -->|"пользователи, роли, права"| admindb
-    admin -->|"события: изменения прав"| audit
+    admin -->|"события без ожидания:<br/>изменения прав"| audit
 
     classDef container fill:#438dd5,stroke:#2e6295,color:#ffffff;
     classDef external fill:#999999,stroke:#6b6b6b,color:#ffffff;
     class ui,bff,core,audit,admin,ticketdb,auditdb,cache,admindb container;
     class agent,chat,orders,flights,pax,idp,notify external;
 ```
+
+**Режим связей.** Все связи синхронные, кроме трёх, подписанных «без ожидания»: запись в аудит идёт без гарантии доставки, потому что сценарий аудита допускает редкую потерю записи ([S10](utility-tree.md)), и на пути запроса не стоит. Таймауты, пулы и предохранители на диаграмму не вынесены, чтобы она читалась: разметка по каждому стыку в [interaction-model.md](interaction-model.md), условие работоспособности BFF в [entry-layer.md](entry-layer.md#условие-работоспособности-решения-один-bff).
 
 ## Контейнеры и откуда какие требования
 
